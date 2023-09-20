@@ -1,6 +1,5 @@
 console.log("jeger i postregion")
 
-
 /* Get elements */
 
 const btnPost = document.getElementById("btnPost")
@@ -35,8 +34,23 @@ function getRegion(){
 }
 
 
-// vi laver en async function putRegion. Den skal være async, fordi den skal await
-async function
+// vi laver en async function postRegion. Den skal være async, fordi den skal await som hedder postRegion
+async function postRegion(){
+    // We create a object and set it to be the region, we get from getRegion function
+    const region = getRegion()
+    // We create a const that contains the post endpoint
+    const postUrl = regionUrl +"/indsæt";
+    // We create a const response that await while the object is posted as json
+    // We call function postObjectAsJson with the required information
+    const res = await postObjectAsJson(putUrl, region, "PUT")
+}
+
+// We create the postObjectAsJson async function
+//It takes 3 parameters:
+// url from previous function. Object (region) from previous function.
+
+
+
 
 
 
